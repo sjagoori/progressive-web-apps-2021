@@ -1,3 +1,6 @@
+<details>
+<summary>Old readme</summary>
+
 # Progressive Web Apps @cmda-minor-web · 20-21
 
 In this course we will convert the client side web application previously made Web App From Scratch into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately we are going to implement a series of optimisations to improve the performance of the application.  
@@ -52,3 +55,4 @@ Doel: Optimize the Critical Rendering Path
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+</details>
