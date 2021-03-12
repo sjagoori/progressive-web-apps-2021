@@ -1,9 +1,6 @@
 const port = 3000;
 
-// Our router module
 const router = require('./routes/router');
-
-// Express module
 const express = require('express');
 const app = express();
 
