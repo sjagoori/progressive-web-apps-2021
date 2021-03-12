@@ -1,0 +1,152 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #020306;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a{ color: white}
+
+header nav:first-of-type {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75vw;
+  border: 2px solid #23283A;
+  background-color: #161924;
+}
+
+header nav:first-of-type ul { 
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+header nav:first-of-type ul li { 
+  padding: 0px 10px;
+}
+
+header nav:first-of-type ul li a { 
+  color: white;
+
+}
+
+header nav:nth-of-type(2) {
+  margin-top: 200px;
+  display: relative; 
+  height: 100vh;
+  width: 75vw;
+  margin-left: 50%;
+  transform: translateX(-50%)
+}
+
+header nav:nth-of-type(2) ul {
+  margin-top: 3rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 15px;
+  column-gap: 20px;
+  list-style-type: none;
+}
+
+header nav:nth-of-type(2) ul li:nth-child(3n+2) {
+  margin-top: 35px;
+  margin-bottom: -35px;
+}
+
+header nav:nth-of-type(2) ul li:nth-child(3n) {
+  margin-top: 65px;
+  margin-bottom: -65px;
+}
+
+header nav:nth-of-type(2) ul li {
+  transition: .3s;
+  cursor: pointer;
+  max-height: 500px;
+  max-width: 100%;
+  padding: 15px 0px;
+  border: 2px solid #23283A;
+  background-color: #161924;
+}
+
+header nav:nth-of-type(2) ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: space-around;
+}
+
+header nav:nth-of-type(2) ul li a div {
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav:nth-of-type(2) ul li a img { 
+  display: block;
+  margin: 0 auto;
+  filter:grayscale(90);
+  transition: .3s;
+}
+
+header nav:nth-of-type(2) ul li:hover a img{
+  filter:grayscale(0)
+}
+
+header nav:nth-of-type(2) ul li a p, h1 { 
+  margin-bottom: 0;
+}
+
+header nav:nth-of-type(2) ul li a p{
+
+}
+
+[price='green']{
+  text-decoration: underline;  
+  text-decoration-color: #20C375;
+  text-decoration-thickness: 5px;
+}
+
+[price='red']{
+  text-decoration: underline;  
+  text-decoration-color: #C35120;
+  text-decoration-thickness: 5px;
+}
+
+[card='green']:hover {
+  box-shadow: 4px 4px 0px -1px #20C375;
+}
+
+[card='red']:hover {
+  box-shadow: 4px 4px 0px -1px #C35120;
+}
+
+@media only screen and (max-width: 800px) {
+  header nav:nth-of-type(2) ul {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+  }
+
+  header nav:nth-of-type(2) ul li:not(:first-child) {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header nav:nth-of-type(2) ul {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  header nav:nth-of-type(2) ul li:not(:first-child) {
+    margin: 0px;
+  }
+}

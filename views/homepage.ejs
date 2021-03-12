@@ -5,7 +5,27 @@
 
   <body>
     <header>
-      <h1><%- query.title %></h1>
+      <h1>
+        <%- query.title %>
+      </h1>
+      <nav></nav>
+      <nav>
+        <ul>
+          <% for (var i=0; i < query.data.length; i++) { %>
+            <a href=<%=query.data[i].name %>
+              <div>
+                <img src=<%=query.data[i].logo %> alt="<%= query.data[i].name %> logo">
+                  <h1>
+                    <%= query.data[i].name %>
+                  </h1>
+                  <p>
+                    <%= query.data[i].quote[0].price %>
+                  </p>
+              </div>
+            </a>
+            <% } %>
+        </ul>
+      </nav>
     </header>
   </body>
 
