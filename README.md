@@ -1,3 +1,45 @@
+# Progressive-web-apps-2021
+The course Progressive Web Apps is about learning to build server side rendered applications.
+
+![](https://s2.coinmarketcap.com/static/cloud/img/splash_600x315_1.png?_=5c08a0b)
+
+<table style="margin-left: auto; margin-right: auto;">
+    <tr>
+        <td align="center"><a href="#live-demo">💻Live demo<a></td>
+        <td align="center"><a href="#-the-Concept">📓 The Concept<a></td>
+        <td align="center"><a href="#-installation">🤖 Installation<a></td>
+        <td align="center"><a href="#-sources">🤝 Sources<a></td>
+        <td align="center"><a href="#-license">📝 License<a></td>
+    </tr>
+</table>
+
+## 💻Live demo
+[Link](#)
+
+## 📝The concept
+The main objective of this project is to render data from an API endpoint so, given what is required, I've picked the topic of cryptocurrency. Specifically the pricing and general information along with the contact information of each. For the data I will use CoinmarketCap's API, you can find their documentation [here](https://coinmarketcap.com/api/documentation/v1/). The landing of this concept will display a top list of cryptocurrencies based on their market cap. Once selected, it brings you to a detail page where you will find additional information. The used endpoints for this project are `/listings` for the top lists and `/info` for the additional infomation for each coin in the toplist. 
+
+
+## 🤖 Installation
+**Run the project:**
+1. Install dependencies
+`npm install`
+2. Run project
+`npm run start`
+
+## 🤝 Sources
+[Data by CoinMarketCap](https://coinmarketcap.com/api/documentation/v1/)  
+[Base project](https://github.com/sjagoori/progressive-web-apps-2021)    
+[Build inspiration by Declan](https://github.com/decrek)
+
+
+
+## 📝 License
+[GPLv3](https://choosealicense.com/licenses/mit/)
+
+
+![](https://visitor-badge.laobi.icu/badge?page_id=sjagoori.progressive-web-apps-2021)
+
 <details>
 <summary>Old readme</summary>
 
