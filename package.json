@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run build",
     "start": "nodemon ./index.js",
     "prebuild": "rimraf ./dist",
     "build": "npm-run-all build:static:* && npm run build:html",
