@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('partials/head', { title: query.data.name})%>
+
+<body>
+
+  <% if (typeof query.data !='undefined' ) { %>
+
+    <img src=<%- query.data.logo %> alt="<%- query.data.name %> logo">
+
+      <%- query.data.name %>
+      <%- query.data.symbol %>
+      <%- query.data.description %>
+      <%- query.data.price %>
+      <%- query.data.percentage %>
+      <%- query.data.urls.github %>
+
+  <% } %>
+
+</body>
+
+</html>
