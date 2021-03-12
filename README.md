@@ -6,7 +6,7 @@ The course Progressive Web Apps is about learning to build server side rendered 
 <table style="margin-left: auto; margin-right: auto;">
     <tr>
         <td align="center"><a href="#live-demo">💻Live demo<a></td>
-        <td align="center"><a href="#-the-Concept">📓 The Concept<a></td>
+        <td align="center"><a href="#the-concept">📓 The Concept<a></td>
         <td align="center"><a href="#-installation">🤖 Installation<a></td>
         <td align="center"><a href="#-sources">🤝 Sources<a></td>
         <td align="center"><a href="#-license">📝 License<a></td>
