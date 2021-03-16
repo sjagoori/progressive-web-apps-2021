@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/sjagoori/progressive-web-apps-2021#readme",
   "dependencies": {
+    "async-redis": "^1.1.7",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
@@ -34,6 +35,7 @@
     "gulp-cssnano": "^2.1.3",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
+    "redis": "^3.0.2",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
