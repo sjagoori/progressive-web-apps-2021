@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('partials/head', { title: query.data.name})%>
+<%- include('partials/head', { title: "Detailpage" , css: "main" })%>
 
-<body>
+  <body>
+    <a href="/">Home</a>
+    <h1><%= title %></h1>
+    <% if(data.length <=0){ %>
+      <h1>Not found</h1>
+      <% } else{ %>
+        <div>
+          <h1></h1>
+          <ul>
+            <% for (var i=0; i < (data.length/3); i++) { %>
+              <li>
+                <a href="https://www.reddit.com<%=data[i].data.permalink %>""><%= data[i].data.title %></a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
 
-  <% if (typeof query.data !='undefined' ) { %>
-
-    <img src=<%- query.data.logo %> alt="<%- query.data.name %> logo">
-
-      <%- query.data.name %>
-      <%- query.data.symbol %>
-      <%- query.data.description %>
-      <%- query.data.price %>
-      <%- query.data.percentage %>
-      <%- query.data.urls.github %>
-
-  <% } %>
-
-</body>
+    <% } %>
+  </body>
 
 </html>
