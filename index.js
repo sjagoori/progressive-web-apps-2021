@@ -6,7 +6,7 @@ const app = express();
 
 // Setting EJS as template engine 
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/static'));
 
 // We're using this file as router for all routes
 app.use('/', router);
