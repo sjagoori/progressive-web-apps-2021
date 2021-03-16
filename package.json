@@ -10,7 +10,8 @@
     "prebuild": "rimraf ./dist",
     "build": "npm-run-all build:static:* && npm run build:html",
     "build:html": "node scripts/build-html.js",
-    "build:static:css": "node scripts/build-css.js"
+    "build:static:css": "node scripts/build-css.js",
+    "build:static:manifest": "node scripts/build-assets.js"
   },
   "repository": {
     "type": "git",
