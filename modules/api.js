@@ -7,7 +7,7 @@ const cache = require('../modules/cache.js')
  * @param {Object} header Header params
  */
 async function getSubredditData(subreddit) {
-  return await cache.getCache(subreddit) ? await cache.getCache(subreddit) : await fetchData(subreddit)
+  return cache.getCache(subreddit) ? await cache.getCache(subreddit) : await fetchData(subreddit)
 }
 
 module.exports.getSubredditData = getSubredditData;
