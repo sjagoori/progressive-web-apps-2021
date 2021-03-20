@@ -24,6 +24,10 @@ body div ul li a, a{
   text-decoration: none;
 }
 
+body div ul li img{
+  width: 150px;
+}
+
 /* https://css-tricks.com/hover-on-everything-but/ */
 body div:hover>ul li {
   opacity: 0.5;
