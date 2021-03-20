@@ -12,10 +12,13 @@
         <div>
           <h1></h1>
           <ul>
-            <% for (var i=0; i < (data.length/3); i++) { %>
+            <% for (var i=0; i < 5; i++) { %>
               <li>
                 <a href="https://www.reddit.com<%=data[i].data.permalink %>""><%= data[i].data.title %></a>
-            </li>
+                
+                <img src="<% data[i].data.preview.images[0].url %>" alt="" srcset="">
+
+              </li>
           <% } %>
         </ul>
       </div>
