@@ -7,7 +7,7 @@ const cache = require('../modules/cache.js')
  * @param {Object} header Header params
  */
 async function getSubredditData(subreddit) {
-  return await cache.getCache(subreddit) ? JSON.parse(await cache.getCache(subreddit)) : await fetchData(subreddit)
+  return await cache.getCache(subreddit) ? cache.getCache(subreddit) : await fetchData(subreddit)
 }
 
 module.exports.getSubredditData = getSubredditData;
@@ -21,11 +21,11 @@ async function fetchData(subreddit) {
         data: [],
       } :
         (
-          cache.setCache(subreddit, JSON.stringify({
+          cache.setCache(subreddit, {
             timestamp: +new Date,
             title: 'r/' + subreddit,
             data: response.data.data.children,
-          }))
+          })
           ,
           {
             timestamp: +new Date,
