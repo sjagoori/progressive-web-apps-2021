@@ -6,11 +6,13 @@
   <body>
     <h1>Home</h1>
 
-    <% for (var i=0; i < (data.length); i++) { %>
-      <li>
-        <a href="<%= data[i].title %>.html"><%= data[i].title %></a>
-      </li>
-    <% } %>
+    <ul>
+      <% for (var i=0; i < (data.length); i++) { %>
+        <li>
+          <a href="<%= data[i].title %>.html"><%= data[i].title %></a>
+        </li>
+        <% } %>
+      </ul>
   </body>
 
 </html>
