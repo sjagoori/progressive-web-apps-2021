@@ -6,7 +6,7 @@ const cache = require('../modules/cache.js')
 const path = require('path');
 
 router.get('/:subreddit*?', async (req, res) => {
-  return req.params.subreddit ? res.render('detailpage', await api.getSubredditData(req.params.subreddit.split(".").slice(0, -1).join("."))) : res.render('homepage', JSON.parse(await cache.getCache('subreddits')))
+  return req.params.subreddit ? res.render('detailpage', await api.getSubredditData(req.params.subreddit.split(".").slice(0, -1).join("."))) : res.render('homepage', {data: cache.getCache('subreddits')})
 })
 
 module.exports = router;
