@@ -6,9 +6,9 @@
   <body>
     <div>
       <ul>
-        <% for (var i=0; i < (data.length); i++) { %>
+        <% for (var i=0; i < (query.length); i++) { %>
           <li>
-            <a href="<%= data[i].title %>.html"><%= data[i].title %></a>
+            <a href="<%= query[i].title %>.html"><%= query[i].title %></a>
           </li>
           <% } %>
         </ul>

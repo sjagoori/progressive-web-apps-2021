@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include('partials/head', { title: "Detailpage" , css: "detailpage" })%>
+  <%- include('partials/head', { title: "Detailpage" , css: "detailpage" })%>
 
   <body>
     <a href="/">Home</a>
-    <h1><%= title %></h1>
-    <% if(data.length <=0){ %>
+    <% if(query != undefined ){ %> 
+
+    <h1><%= query.title %></h1>
+    <div>
+      <ul>
+        <% for (var i=0; i < query.data.length; i++) { %>
+          <li>
+            <% if(query.data[i] != undefined ){ %>
+              <a href="https://www.reddit.com<%=query.data[i].data.permalink %>""><%= query.data[i].data.title %></a>
+                <% if (query.data[i].data.preview != null) { %>
+                  <img src="<%- query.data[i].data.preview.images[0].source.url %>" alt="" srcset="">
+                <% } %>
+            <% } %>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+    <% } else {%>
       <h1>Not found</h1>
-      <% } else{ %>
-        <div>
-          <h1></h1>
-          <ul>
-            <% for (var i=0; i < 10; i++) { %>
-              <li>
-                <% if(data[i] != undefined ){ %>
-
-                <a href="https://www.reddit.com<%=data[i].data.permalink %>""><%= data[i].data.title %></a>
-                
-
-                <% if (data[i].data.preview != null) { %>
-                  <img src="<%- data[i].data.preview.images[0].source.url %>" alt="" srcset="">
-                <% } %>
-
-
-                <% } %>
-
-              </li>
-          <% } %>
-        </ul>
-      </div>
-
     <% } %>
   </body>
-
 </html>
