@@ -12,11 +12,21 @@
         <div>
           <h1></h1>
           <ul>
-            <% for (var i=0; i < 5; i++) { %>
+            <% for (var i=0; i < 10; i++) { %>
               <li>
+                <% if(data[i] != undefined ){ %>
+
                 <a href="https://www.reddit.com<%=data[i].data.permalink %>""><%= data[i].data.title %></a>
                 
-                <img src="<% data[i].data.preview.images[0].url %>" alt="" srcset="">
+
+                <% if (data[i].data.preview != null) { %>
+                  <% console.log(data[i].data.preview.images) %>
+                  <img src="<%- data[i].data.preview.images[0].source.url %>" alt="" srcset="">
+                  <span>Aaaa</span>
+                <% } %>
+
+
+                <% } %>
 
               </li>
           <% } %>
