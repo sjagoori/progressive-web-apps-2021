@@ -18,7 +18,20 @@ body div {
   /* overflow: hidden; */
 }
 
+ul{
+  list-style: none;
+}
+
+ul li a{
+  font-size: 3em;
+}
+
+ul li::first-letter {
+  text-transform: capitalize;
+}
+
 body div ul li a, a{
+  font-weight: bold;
   color: #818181;
   font-size: 2rem;
   text-decoration: none;
