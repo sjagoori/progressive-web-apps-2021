@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+
+body {
+  width: 75vw;
+  margin: 0 auto;
+  background-color: #0f0f0f;
+  color: #818181;
+}
+
+body div {
+  width: 100%;
+  margin: 0 auto;
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  font-weight: bold;
+  color: #818181;
+  font-size: 2rem;
+  text-decoration: none;
+  font-size: 3em;
+}
+
+ul li::first-letter {
+  text-transform: capitalize;
+}
+
+body div:hover > ul li {
+  opacity: 0.5;
+  color: #313131;
+  transition: 0.1s;
+}
+
+body div:hover > ul li:hover {
+  opacity: 1;
+}
