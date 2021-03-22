@@ -10,6 +10,14 @@ body {
   background-color: #00534c;
 }
 
+body>a{
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 .grid-lines {
   position: fixed;
   top: 0;
@@ -42,6 +50,10 @@ body h1 {
 
 body h1::first-letter {
   text-transform: capitalize;
+}
+
+body div:nth-of-type(2) {
+  margin-bottom: 50px;
 }
 
 ul {
@@ -121,16 +133,25 @@ body div:hover > ul li:hover {
   opacity: 1;
 }
 
-
-
-@media only screen and (max-width: 800px) {
-  ul{
-    /* width: 0%; */
+@media only screen and (max-width: 900px) {
+  ul {
     grid-template-columns: 1fr;
     margin: 0 auto;
   }
 
-  nav ul li:nth-child(3n+2) {
+  ul li {
+    height: 250px;
+  }
+
+  ul li div {
+    height: 100%;
+  }
+
+  ul li div img {
+    max-height: 350px;
+  }
+
+  nav ul li:nth-child(3n + 2) {
     margin-top: 0px;
     margin-bottom: 0px;
   }
