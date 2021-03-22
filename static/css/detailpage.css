@@ -7,19 +7,76 @@
 body {
   width: 75vw;
   margin: 0 auto;
-  background-color: #0F0F0F;
-  color: #818181;
+  background-color: #00534C;
 }
 
-body div {
-  width: 100%;
-  margin: 0 auto;
-  /* white-space: nowrap; */
-  /* overflow: hidden; */
+.grid-lines {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: space-between;
+
+  width: calc(100% - 60px);
+  max-width: 1600px;
+  height: 100%;
+
+  z-index: -2;
+}
+
+.grid-lines span {
+  border: 0.000001px solid #D7D6D410;
+}
+
+
+
+body h1 {
+  margin: 50px 0px;
+  font-weight: 500;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  font-size: 3em;
+}
+
+body h1::first-letter {
+  text-transform: capitalize;
 }
 
 ul{
   list-style: none;
+  gap: 1.2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid #9BB7B590;
+  max-width: 300px;
+  padding: 10px;
+  overflow: hidden;
+  transition: .3s;
+  background-color: #00534C;
+}
+
+li:hover, li:focus-within{
+  background-color: #00675e;
+}
+
+li div {
+  /* width: 100%; */
+  height: 100px;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+li div img{ 
+  max-width: 100%;
 }
 
 ul li a{
@@ -30,20 +87,18 @@ ul li::first-letter {
   text-transform: capitalize;
 }
 
-body div ul li a, a{
-  font-weight: bold;
-  color: #818181;
-  font-size: 2rem;
+body div ul li a{
   text-decoration: none;
+  color: #0f0f0f;
+  font-size: 1rem;
+  color: white;
+  font-weight: 300;
 }
 
-body div ul li img{
-  width: 150px;
-}
 
 /* https://css-tricks.com/hover-on-everything-but/ */
 body div:hover>ul li {
-  opacity: 0.5;
+  /* opacity: 0.5; */
   color: #313131;
   transition: .1s;
 }

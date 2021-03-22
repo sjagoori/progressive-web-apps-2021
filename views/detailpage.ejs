@@ -6,6 +6,18 @@
     <a href="/">Home</a>
     <% if(query != undefined ){ %> 
 
+    <div class="grid-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <h1><%= query.title %></h1>
     <div>
       <ul>
@@ -14,7 +26,9 @@
             <% if(query.data[i] != undefined ){ %>
               <a href="https://www.reddit.com<%=query.data[i].data.permalink %>""><%= query.data[i].data.title %></a>
                 <% if (query.data[i].data.preview != null) { %>
-                  <img src="<%- query.data[i].data.preview.images[0].source.url %>" alt="" srcset="">
+                  <div>
+                    <img src="<%- query.data[i].data.preview.images[0].source.url %>" alt="" srcset="" loading="lazy">
+                  </div>
                 <% } %>
             <% } %>
           </li>

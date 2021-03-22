@@ -7,24 +7,46 @@
 body {
   width: 75vw;
   margin: 0 auto;
-  background-color: #0f0f0f;
-  color: #818181;
+  background-color: #00534c;
 }
 
 body div {
   width: 100%;
-  margin: 0 auto;
-  /* white-space: nowrap; */
-  /* overflow: hidden; */
+
+}
+
+.grid-lines {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: space-between;
+
+  width: calc(100% - 60px);
+  max-width: 1600px;
+  height: 100%;
+
+  z-index: -2;
+}
+
+.grid-lines span {
+  border: 0.000001px solid #d7d6d410;
 }
 
 ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   list-style: none;
 }
 
 ul li a {
   font-weight: bold;
-  color: #818181;
+  color: white;
   font-size: 2rem;
   text-decoration: none;
   font-size: 3em;
