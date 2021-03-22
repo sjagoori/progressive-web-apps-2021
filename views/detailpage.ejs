@@ -3,8 +3,8 @@
   <%- include('partials/head', { title: "Detailpage" , css: "detailpage" })%>
 
   <body>
-    <a href="/">Home</a>
-    <% if(query != undefined ){ %> 
+    <a href="/">⇦ Back</a>
+    <% if(query != undefined ){ %>
 
     <div class="grid-lines">
       <span></span>
@@ -23,23 +23,39 @@
       <nav>
         <ul>
           <% for (var i=0; i < query.data.length; i++) { %>
-            <li>
-              <% if(query.data[i] != undefined ){ %>
-                <a href="https://www.reddit.com<%=query.data[i].data.permalink %>"><%= query.data[i].data.title %></a>
-                  <% if (query.data[i].data.preview != null) { %>
-                    <% console.log(query.data[i].data.preview.images[0].resolutions[0].url) %>
-                    <div>
-                      <img src="<%- query.data[i].data.preview.images[0].resolutions[1].url %>" alt="" srcset="" loading="lazy">
-                    </div>
-                  <% } %>
+          <li>
+            <% if(query.data[i] != undefined ){ %>
+            <a href="https://www.reddit.com<%=query.data[i].data.permalink %>"
+              ><%= query.data[i].data.title %></a
+            >
+            <% if (query.data[i].data.preview != null) { %> <%
+            console.log(query.data[i].data.preview.images[0].resolutions[0]) %>
+            <div>
+              <% if(query.data[i].data.preview.images[0].resolutions[1].url !=
+              null) {%>
+              <img
+                src="<%- query.data[i].data.preview.images[0].resolutions[1].url %>"
+                alt=""
+                srcset=""
+                loading="lazy"
+              />
+              <% } else {%>
+              <img
+                src="<%- query.data[i].data.preview.images[0].resolutions[0].url %>"
+                alt=""
+                srcset=""
+                loading="lazy"
+              />
               <% } %>
-            </li>
+            </div>
+            <% } %> <% } %>
+          </li>
           <% } %>
         </ul>
       </nav>
     </div>
     <% } else {%>
-      <h1>Not found</h1>
+    <h1>Not found</h1>
     <% } %>
   </body>
 </html>
