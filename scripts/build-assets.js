@@ -13,6 +13,11 @@ function moveAssets() {
     './static/*.js',
   ])
     .pipe(gulp.dest('./dist/'))
+
+  gulp.src([
+    './static/scripts/*.js'
+  ])
+    .pipe(gulp.dest('./dist/scripts'))
   return
 
 }
