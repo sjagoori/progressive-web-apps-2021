@@ -5,9 +5,9 @@
 }
 
 body {
-  width: 75vw;
+  width: 60vw;
   margin: 0 auto;
-  background-color: #00534C;
+  background-color: #00534c;
 }
 
 .grid-lines {
@@ -27,10 +27,8 @@ body {
 }
 
 .grid-lines span {
-  border: 0.000001px solid #D7D6D410;
+  border: 0.000001px solid #d7d6d410;
 }
-
-
 
 body h1 {
   margin: 50px 0px;
@@ -39,13 +37,14 @@ body h1 {
   font-size: 2rem;
   text-decoration: none;
   font-size: 3em;
+  width: max-content;
 }
 
 body h1::first-letter {
   text-transform: capitalize;
 }
 
-ul{
+ul {
   list-style: none;
   gap: 1.2em;
   display: grid;
@@ -56,15 +55,31 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 2px solid #9BB7B590;
-  max-width: 300px;
+  border: 2px solid #9bb7b590;
+  max-width: 100%;
+  /* height: max-content; */
   padding: 10px;
   overflow: hidden;
-  transition: .3s;
-  background-color: #00534C;
+  transition: 0.3s;
+  background-color: #00534c;
 }
 
-li:hover, li:focus-within{
+nav ul li:nth-child(1n + 2) {
+  /* background-color: red; */
+}
+
+nav ul li:nth-child(3n + 2) {
+  margin-top: 35px;
+  margin-bottom: -35px;
+}
+
+nav ul li:nth-child(3n) {
+  margin-top: 65px;
+  margin-bottom: -65px;
+}
+
+li:hover,
+li:focus-within {
   background-color: #00675e;
 }
 
@@ -75,11 +90,11 @@ li div {
   padding-top: 10px;
 }
 
-li div img{ 
-  max-width: 100%;
+li div img {
+  width: 100%;
 }
 
-ul li a{
+ul li a {
   font-size: 3em;
 }
 
@@ -87,7 +102,7 @@ ul li::first-letter {
   text-transform: capitalize;
 }
 
-body div ul li a{
+body div ul li a {
   text-decoration: none;
   color: #0f0f0f;
   font-size: 1rem;
@@ -95,15 +110,33 @@ body div ul li a{
   font-weight: 300;
 }
 
-
 /* https://css-tricks.com/hover-on-everything-but/ */
-body div:hover>ul li {
+body div:hover > ul li {
   /* opacity: 0.5; */
   color: #313131;
-  transition: .1s;
+  transition: 0.1s;
 }
 
-body div:hover>ul li:hover {
-  opacity: 1.0;
+body div:hover > ul li:hover {
+  opacity: 1;
+}
 
+
+
+@media only screen and (max-width: 800px) {
+  ul{
+    /* width: 0%; */
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  nav ul li:nth-child(3n+2) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  nav ul li:nth-child(3n) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
