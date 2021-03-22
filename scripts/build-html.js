@@ -8,6 +8,7 @@ const cache = require("../modules/cache.js");
 
 generateHomepage()
 generateDetailpage();
+generateOfflinepage();
 
 async function generateHomepage() {
   const data = { query: cache.getCache("subreddits") };
@@ -23,6 +24,11 @@ async function generateDetailpage() {
     const html = renderTemplate("./views/detailpage.ejs", data);
     writeFile("./dist", element + ".html", html);
   });
+}
+
+async function generateOfflinepage() {
+  const html = renderTemplate("./views/offline.ejs");
+  writeFile("./dist", "offline.html", html);
 }
 
 function renderTemplate(templatePath, data) {
