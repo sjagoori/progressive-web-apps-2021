@@ -9,7 +9,7 @@ const requiredSubreddits = [
   { title: "funny" },
   { title: "music" },
   { title: "pics" },
-  { title: "science" },
+  { title: "askreddit" },
 ];
 
 async function populateDatabase() {

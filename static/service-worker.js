@@ -5,7 +5,7 @@ const cacheURLs = [
   './index.html',
   './music.html',
   './pics.html',
-  './science.html'
+  './askreddit.html'
 ]
 
 if ('serviceWorker' in navigator) {
