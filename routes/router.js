@@ -11,7 +11,9 @@ router.get("/:subreddit*?", async (req, res) => {
       : req.params.subreddit
     : null;
 
-  return req.params.subreddit
+  param == "offline"
+    ? res.render("offline")
+    : param != undefined
     ? res.render("detailpage", { query: await api.getSubredditData(param) })
     : res.render("homepage", { query: cache.getCache("subreddits") });
 });
