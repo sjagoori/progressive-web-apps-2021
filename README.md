@@ -1,7 +1,7 @@
 # Progressive-web-apps-2021
 The course Progressive Web Apps is about learning to build server side rendered applications.
 
-![](https://s2.coinmarketcap.com/static/cloud/img/splash_600x315_1.png?_=5c08a0b)
+![](./static/images/icon.png)
 
 <table style="margin-left: auto; margin-right: auto;">
     <tr>
@@ -17,8 +17,7 @@ The course Progressive Web Apps is about learning to build server side rendered 
 [Link](#)
 
 ## 📝The concept
-The main objective of this project is to render data from an API endpoint so, given what is required, I've picked the topic of cryptocurrency. Specifically the pricing and general information along with the contact information of each. For the data I will use CoinmarketCap's API, you can find their documentation [here](https://coinmarketcap.com/api/documentation/v1/). The landing of this concept will display a top list of cryptocurrencies based on their market cap. Once selected, it brings you to a detail page where you will find additional information. The used endpoints for this project are `/listings` for the top lists and `/info` for the additional infomation for each coin in the toplist. 
-
+The main objective of this project is to render data from an API endpoint so, given what is required, I've picked the reddit API. Specifically the listing of posts in subreddits. The data required will be fetched from Reddit's API, which they made open and easy; append .json to a subreddit's url. The landing will list a range of popular subreddits (hardcoded) and each detailpage will list the top posts at that moment. It will be also possible to browse to other subreddits by adding it to the url.
 
 ## 🤖 Installation
 **Run the project:**
@@ -28,7 +27,7 @@ The main objective of this project is to render data from an API endpoint so, gi
 `npm run start`
 
 ## 🤝 Sources
-[Data by CoinMarketCap](https://coinmarketcap.com/api/documentation/v1/)  
+[Data by Reddit](https://s-progressive-web-apps-2021.herokuapp.com/)  
 [Base project](https://github.com/sjagoori/progressive-web-apps-2021)    
 [Build inspiration by Declan](https://github.com/decrek)
 
