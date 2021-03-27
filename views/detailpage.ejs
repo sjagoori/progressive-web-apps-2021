@@ -28,8 +28,7 @@
             <a href="https://www.reddit.com<%=query.data[i].data.permalink %>"
               ><%= query.data[i].data.title %></a
             >
-            <% if (query.data[i].data.preview != null) { %> <%
-            console.log(query.data[i].data.preview.images[0].resolutions[0]) %>
+            <% if (query.data[i].data.preview != null) { %>
             <div>
               <% if(query.data[i].data.preview.images[0].resolutions[1].url !=
               null) {%>
