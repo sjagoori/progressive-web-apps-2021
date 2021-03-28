@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head', { title: "Detailpage" , css: "detailpage" , js: "main"})%>
+<%- include('partials/head', { title: "Detailpage" , css: "detailpage" })%>
 
   <body>
     <a href="/">⇦ Back</a>
-    <% if(query != undefined ){ %>
+    <% if(query !=undefined ){ %>
 
-    <div class="grid-lines">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <div class="grid-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    <h1><%= query.title %></h1>
-    <div>
-      <nav>
-        <ul>
-          <% for (var i=0; i < query.data.length; i++) { %>
-          <li>
-            <% if(query.data[i] != undefined ){ %>
-            <a href="https://www.reddit.com<%=query.data[i].data.permalink %>"
-              ><%= query.data[i].data.title %></a
-            >
-            <% if (query.data[i].data.preview != null) { %>
-            <div>
-              <% if(query.data[i].data.preview.images[0].resolutions[1].url !=
-              null) {%>
-              <img
-                src="<%- query.data[i].data.preview.images[0].resolutions[1].url %>"
-                alt=""
-                srcset=""
-                loading="lazy"
-              />
-              <% } else {%>
-              <img
-                src="<%- query.data[i].data.preview.images[0].resolutions[0].url %>"
-                alt=""
-                srcset=""
-                loading="lazy"
-              />
-              <% } %>
-            </div>
-            <% } %> <% } %>
-          </li>
-          <% } %>
-        </ul>
-      </nav>
-    </div>
-    <% } else {%>
-    <h1>Not found</h1>
-    <% } %>
+      <h1>
+        <%= query.title %>
+      </h1>
+      <div>
+        <nav>
+          <ul>
+            <% for (var i=0; i < query.data.length; i++) { %>
+              <li>
+                <% if(query.data[i] !=undefined ){ %>
+                  <a href="https://www.reddit.com<%=query.data[i].data.permalink %>">
+                    <%= query.data[i].data.title %>
+                  </a>
+                  <% if (query.data[i].data.preview !=null) { %>
+                    <div>
+                      <% if(query.data[i].data.preview.images[0].resolutions[1].url !=null) {%>
+                        <img src="<%- query.data[i].data.preview.images[0].resolutions[1].url %>" alt="" srcset=""
+                          loading="lazy" />
+                        <% } else {%>
+                          <img src="<%- query.data[i].data.preview.images[0].resolutions[0].url %>" alt="" srcset=""
+                            loading="lazy" />
+                          <% } %>
+                    </div>
+                  <% } %>
+                <% } %>
+
+              </li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>
+      <% } else {%>
+        <h1>Not found</h1>
+      <% } %>
+      <script async src="./scripts/main.js"></script>
   </body>
+
 </html>
