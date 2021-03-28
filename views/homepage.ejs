@@ -24,6 +24,9 @@
             <a href="<%= query[i].title %>.html"><%= query[i].title %></a>
           </li>
           <% } %>
+          <form action="/" method="get">
+            <input type="text" name="query" id="query" placeholder="Find a subreddit" autocomplete="off" ><input type="submit" value=">"></input>
+          </form>
         </ul>
       </nav>
     <script async src="./scripts/main.js"></script>
