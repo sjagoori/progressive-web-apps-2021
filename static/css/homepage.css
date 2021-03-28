@@ -7,6 +7,7 @@
 body {
   width: 75vw;
   margin: 0 auto;
+  padding: 20px;
   background-color: #00534c;
 }
 
@@ -35,16 +36,63 @@ body div {
   border: 0.000001px solid #d7d6d410;
 }
 
-ul {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+nav {
+  /* position: absolute; */
+  margin-left: 50%;
+  margin-top: 50vh;
   transform: translateY(-50%);
   transform: translate(-50%, -50%);
+  width: max-content;
+}
+
+ul {
   list-style: none;
 }
 
-ul li a {
+body>ul {
+  /* position: absolute; */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: 300px;
+
+}
+
+body>ul h2 {
+  font-weight: bold;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+body>ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid #9bb7b590;
+  max-width: 100%;
+  /* height: max-content; */
+  padding: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  background-color: #00534c;
+  margin-top: 20px;
+}
+
+body>ul li a {
+  text-decoration: none;
+  color: #0f0f0f;
+  font-size: 1rem;
+  color: white;
+  font-weight: 300;
+}
+
+body>ul li:hover,
+body>ul li:focus-within {
+  background-color: #00675e;
+}
+
+nav>ul li a {
   font-weight: bold;
   color: white;
   font-size: 2rem;
@@ -56,12 +104,12 @@ ul li::first-letter {
   text-transform: capitalize;
 }
 
-body div:hover > ul li {
+body nav:hover>ul li {
   opacity: 0.5;
   color: #313131;
   transition: 0.1s;
 }
 
-body div:hover > ul li:hover {
+body nav:hover>ul li:hover {
   opacity: 1;
 }
