@@ -96,13 +96,13 @@ function handleSave(e) {
   let local = JSON.parse(localStorage.getItem('bookmarks'))
   console.log(typeof local, local);
 
-  let zzz = {
+  let newField = {
     title: e.target.parentNode.children[0].innerText,
     link: e.target.parentNode.children[0].href,
     imageSrc: e.target.parentNode.children[1].children[0].src
   }
 
-  local.push(zzz)
+  local.push(newField)
 
   localStorage.setItem('bookmarks', JSON.stringify(local))
 }
