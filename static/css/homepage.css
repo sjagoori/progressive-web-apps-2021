@@ -15,9 +15,9 @@ body div {
   width: 100%;
 }
 
-body>h1{
+body>h1 {
   background-color: white;
-  color: #00534c; 
+  color: #00534c;
   text-align: center;
   padding: 10px 0px;
   border-radius: 0px 0px 10px 10px;
@@ -49,7 +49,7 @@ nav {
   margin-top: 50vh;
   transform: translateY(-50%);
   transform: translate(-50%, -50%);
-  width: max-content;
+  width: 300px;
 }
 
 ul {
@@ -119,4 +119,67 @@ body nav:hover>ul li {
 
 body nav:hover>ul li:hover {
   opacity: 1;
+}
+
+nav>ul:first-of-type form {
+  margin-top: 10px;
+  border: 2px solid #9bb7b590;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav>ul:first-of-type form input {
+  background-color: transparent;
+  color: white;
+  height: 3em;
+  width: 80%;
+  border: none;
+  transition: .1s;
+  font-weight: bold;
+}
+
+nav>ul:first-of-type form input[type='text'] {
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+nav>ul:first-of-type form input[type='text']::placeholder {
+  color: #9bb7b590;
+}
+
+nav>ul:first-of-type form input[type='submit'] {
+  height: 3rem;
+  width: 20%;
+}
+
+nav>ul:first-of-type form input:focus,
+nav>ul:first-of-type form input:hover {
+  outline: none;
+  background-color: #00675e;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 5px;
+  background: transparent;
+  border: 1px solid #9bb7b590;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  transition: .1s;
+}
+
+button.disabled {
+  border-color: #ff1744;
+  background-color: #b2102f80;
+}
+
+button.save {
+  border-color: #2196f3;
+  background-color: #1769aa30 ;
+}
+
+button[disabled]{
+  border-color: #4caf50;
+  background-color: #357a38
 }

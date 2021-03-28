@@ -1,3 +1,4 @@
+console.log('main running');
 // Set bookmark as an empty template array 
 if (localStorage.getItem('bookmarks') == null) localStorage.setItem('bookmarks', JSON.stringify([]))
 
@@ -20,7 +21,9 @@ function renderBookmarksButtons(){
 
     const submitButton = document.createElement('button');
     submitButton.setAttribute('type', 'submit')
+    submitButton.setAttribute('class', 'save')
     submitButton.textContent = 'Save'
+
     Object.values(bookmarks).find(key => key.title === listItem.children[0].innerText) != undefined ? (
       submitButton.setAttribute('disabled', ''),
       submitButton.textContent = 'Saved'
@@ -57,6 +60,7 @@ function renderBookmarks(){
     let submitButton = document.createElement('button')
     submitButton.textContent = 'Remove'
     submitButton.type = 'submit'
+    submitButton.setAttribute('class', 'disabled')
     form.appendChild(submitButton)
 
     listItem.appendChild(a)

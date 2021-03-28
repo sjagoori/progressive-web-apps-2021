@@ -10,7 +10,7 @@ body {
   background-color: #00534c;
 }
 
-body>a{
+body>a {
   color: white;
   text-decoration: none;
   position: absolute;
@@ -123,13 +123,13 @@ body div ul li a {
 }
 
 /* https://css-tricks.com/hover-on-everything-but/ */
-body div:hover > ul li {
+body div:hover>ul li {
   /* opacity: 0.5; */
   color: #313131;
   transition: 0.1s;
 }
 
-body div:hover > ul li:hover {
+body div:hover>ul li:hover {
   opacity: 1;
 }
 
@@ -160,4 +160,30 @@ body div:hover > ul li:hover {
     margin-top: 0px;
     margin-bottom: 0px;
   }
+}
+
+button {
+  cursor: pointer;
+  margin-top: 5px;
+  background: transparent;
+  border: 1px solid #9bb7b590;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  transition: .1s;
+}
+
+button.disabled {
+  border-color: #ff1744;
+  background-color: #b2102f80;
+}
+
+button.save {
+  border-color: #2196f3;
+  background-color: #1769aa30;
+}
+
+button[disabled] {
+  border-color: #4caf50;
+  background-color: #357a38
 }
