@@ -4,6 +4,26 @@
 <%- include('partials/head', { title: "Homepage" , css: "homepage" })%>
 
   <body>
+    <main>
+      <nav>
+        <ul>
+          <% for (var i=0; i < (query.length); i++) { %>
+            <li>
+              <a href="<%= query[i].title %>.html">
+                <%= query[i].title %>
+              </a>
+            </li>
+            <% } %>
+              <li>
+                <form action="/" method="get">
+                  <input type="text" name="query" id="query" placeholder="Find a subreddit" autocomplete="off"><input
+                    type="submit" value=">"></input>
+                </form>
+              </li>
+        </ul>
+      </nav>
+    </main>
+
     <div class="grid-lines">
       <span></span>
       <span></span>
@@ -15,20 +35,7 @@
       <span></span>
       <span></span>
     </div>
-    
 
-      <nav>
-        <ul>
-          <% for (var i=0; i < (query.length); i++) { %>
-          <li>
-            <a href="<%= query[i].title %>.html"><%= query[i].title %></a>
-          </li>
-          <% } %>
-          <form action="/" method="get">
-            <input type="text" name="query" id="query" placeholder="Find a subreddit" autocomplete="off" ><input type="submit" value=">"></input>
-          </form>
-        </ul>
-      </nav>
     <script async src="./scripts/main.js"></script>
   </body>
 
