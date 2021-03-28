@@ -33,16 +33,15 @@
                   <% if (query.data[i].data.preview !=null) { %>
                     <div>
                       <% if(query.data[i].data.preview.images[0].resolutions[1].url !=null) {%>
-                        <img src="<%- query.data[i].data.preview.images[0].resolutions[1].url %>" alt="" srcset=""
-                          loading="lazy" />
-                        <% } else {%>
-                          <img src="<%- query.data[i].data.preview.images[0].resolutions[0].url %>" alt="" srcset=""
-                            loading="lazy" />
-                          <% } %>
+                        <img src="<%- query.data[i].data.preview.images[0].resolutions[1].url %>" alt="<%= query.data[i].data.title %>"
+                          loading="lazy"/>
+                      <% } else {%>
+                        <img src="<%- query.data[i].data.preview.images[0].resolutions[0].url %>" alt="<%= query.data[i].data.title %>"
+                          loading="lazy"/>
+                      <% } %>
                     </div>
                   <% } %>
                 <% } %>
-
               </li>
             <% } %>
           </ul>
