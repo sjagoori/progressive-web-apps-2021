@@ -1,6 +1,8 @@
 const offlinePage = 'offline.html'
 const cacheName = 'cache-v1'
 const cacheURLs = [
+  './service-worker.js',
+  './manifest.json',
   './funny.html',
   './gaming.html',
   './index.html',
@@ -9,7 +11,8 @@ const cacheURLs = [
   './askreddit.html',
   './offline.html',
   './css/homepage.css',
-  './css/detailpage.css'
+  './css/detailpage.css',
+  './scripts/main.js'
 ]
 
 
@@ -47,10 +50,10 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         if (response) {
-          console.log('Found ', event.request.url, ' in cache');
+          // console.log('Found ', event.request.url, ' in cache');
           return response;
         }
-        console.log('Network request for ', event.request.url);
+        // console.log('Network request for ', event.request.url);
         return fetch(event.request)
       }).catch(error => {
         return caches.match(offlinePage);
