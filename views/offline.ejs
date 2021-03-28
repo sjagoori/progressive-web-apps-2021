@@ -4,16 +4,29 @@
   <%- include('partials/head', { title: "You're offline" , css: "homepage" })%>
 
 <body>
+  <div class="grid-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
   <h1>You're offline</h1>
-  <div>
+  <nav>
     <ul>
       <% for (var i=0; i < (query.length); i++) { %>
-        <li>
-          <a href="<%= query[i].title %>.html"><%= query[i].title %></a>
-        </li>
-        <% } %>
-      </ul>
-  </div>
-  <noscript>You have no javascript</noscript>
+      <li>
+        <a href="<%= query[i].title %>.html"><%= query[i].title %></a>
+      </li>
+      <% } %>
+    </ul>
+  </nav>
+  <script async src="./scripts/main.js"></script>
 </body>
+
 </html>
