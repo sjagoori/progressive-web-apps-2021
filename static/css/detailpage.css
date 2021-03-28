@@ -72,7 +72,7 @@ ul li {
   /* height: max-content; */
   padding: 10px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.1s;
   background-color: #00534c;
 }
 
@@ -170,7 +170,7 @@ button {
   padding: 5px;
   border-radius: 3px;
   color: white;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 button.disabled {
