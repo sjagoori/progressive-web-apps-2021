@@ -120,7 +120,7 @@ The main overview- and homepage, passed the audit with all 100% scores and no fu
 ![](./assets/lh_home_overview.png)
 ![](./assets/lh_home_perf.png)
 
-The detail pages (which are the subreddits) scored just like the overview page. It scored 100 on all sections with no further required improvements.
+The detail pages (which are the subreddits) scored just like the overview page. It scored 100 on all sections with no further required improvements.    
 ![](./assets/lh_sub_overview.png)
 ![](./assets/lh_sub_perf.png)
 
