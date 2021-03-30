@@ -40,10 +40,10 @@ To achieve this, I've implemented the express module [compress](https://www.npmj
 This package helps the express middleware to compress responses sent from the server. 
 
 Without compression: 
-![](./assets/compress-normal.jpg)
+![](./assets/compress_normal.png)
 
 Once the responses are compressed, we see the that the file sizes are reduced by an average of `60%`.
-![](./assets/compress-compressed.jpg)
+![](./assets/compress_compressed.png)
 
 
 ### Minifying
