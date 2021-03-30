@@ -10,10 +10,6 @@ body {
   background-color: #00534c;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
 .grid-lines {
   position: fixed;
   top: 0;
