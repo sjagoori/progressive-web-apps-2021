@@ -1,5 +1,5 @@
 # Read-it
-*Read-it is a Reddit PWA that displays hot posts of gives subreddit while focussing on performance*
+*Read-it is a Reddit PWA that displays hot posts of a (given) subreddit while focussing on web performance*
 
 ![](./assets/overview.png)
 ![](./assets/sub.png)
