@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const api = require("../modules/api.js");
@@ -18,12 +17,6 @@ router.get("/:subreddit*?", async (req, res) => {
     : param != undefined
       ? res.render("detailpage", { query: await api.getSubredditData(param) })
       : res.render("homepage", { query: cache.getCache("subreddits") });
-
-
 });
-
-// router.post(":subreddit", async (req, res) => {
-//   console.log(req.params);
-// });
 
 module.exports = router;
