@@ -32,7 +32,7 @@
                   </a>
                   <% if (query.data[i].data.preview !=null) { %>
                     <div>
-                      <% if(query.data[i].data.preview.images[0].resolutions[1].url !=null) {%>
+                      <% if(query.data[i].data.preview.images[0].resolutions[1] != null) {%>
                         <img src="<%- query.data[i].data.preview.images[0].resolutions[1].url %>" alt="<%= query.data[i].data.title %>"
                           loading="lazy"/>
                       <% } else {%>

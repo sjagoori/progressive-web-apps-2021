@@ -1,11 +1,11 @@
 console.log('main running');
 // Set bookmark as an empty template array 
-if (localStorage.getItem('bookmarks') == null) localStorage.setItem('bookmarks', JSON.stringify([]))
+if (localStorage.getItem('bookmarks') == null) localStorage.setItem('bookmarks', JSON.stringify([]));
 
 // Set bookmarks as global variable
 let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
 
-window.location.pathname != '/' ? renderBookmarksButtons() : renderBookmarks()
+window.location.pathname != '/' || window.location.search != '' ? renderBookmarksButtons() : renderBookmarks()
 
 /**
  * Function renders forms to list items and adds evenlisteneres.
