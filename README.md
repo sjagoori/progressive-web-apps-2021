@@ -35,7 +35,7 @@ One way to reduce file sizes is to compress the responses. The files are compres
 
 ![](https://betterexplained.com/wp-content/webp-express/webp-images/uploads/compression/HTTP_request_compressed.png.webp)
 
-To achieve this, I've implemented the express module (compress)[https://www.npmjs.com/package/compress]
+To achieve this, I've implemented the express module [compress](https://www.npmjs.com/package/compress)
 
 This package helps the express middleware to compress responses sent from the server. 
 
@@ -131,7 +131,7 @@ The application scored 100% for the PWA section with no further required improve
 ### Noteworthy features
 To improve performance and ux a little more, I implemented two additional features.
 
-**Bookmarking**
+**Bookmarking**     
 Users that have javascript enabled, are able to bookmark posts.
 
 When javascript runs (or at least not blocked), the scripts renders a form with button to each item in the detailpage. 
@@ -147,7 +147,7 @@ Once saved, the user will be able to find them back on the overview page right b
 ![](./assets/bookmark_home.png)
 
 
-**Server-side caching**
+**Server-side caching**    
 To take performance one step further, the server utilizes server-side caching. Subreddits mentioned on the overview page have their contents pre-cached. 
 
 This leads to faster initial loading times when there is no client-side caching happening (so no service worker).
