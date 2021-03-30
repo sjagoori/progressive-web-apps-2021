@@ -11,6 +11,10 @@ body {
   background-color: #00534c;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body div {
   width: 100%;
 }
