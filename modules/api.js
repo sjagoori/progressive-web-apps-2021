@@ -14,6 +14,10 @@ async function getSubredditData(subreddit) {
 
 module.exports.getSubredditData = getSubredditData;
 
+/**
+ * Function makes an API calls and caches them if they're not cached before or sets not found if they don't exist
+ * @param {String} subreddit - subreddit to request 
+ */
 async function fetchData(subreddit) {
   return await axios
     .get("https://www.reddit.com/r/" + subreddit + ".json", {
